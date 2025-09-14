@@ -1,3 +1,0 @@
-ollama pull llama2:7b
-ollama serve
-python app.py
