@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="icon" type="image/x-icon" href="logo.avif">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Product Container */
+        .product-container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Grid Layout for Products */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-adjust */
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Individual Product Box */
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s;
+        }
+
+        /* Hover Effect */
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Product Image */
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Product Details */
+        .product-details {
+            padding: 10px;
+        }
+
+        .product-name {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: green;
+        }
+
+        .discounted-price {
+            text-decoration: line-through;
+            color: red;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .product-list {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .product-list {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .product-image {
+                height: 150px;
+            }
+
+            .product-name {
+                font-size: 1em;
+            }
+
+            .product-price {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <ul class="product-list">
+            <li class="product-item">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS9MPWA3Dp6xmQfwedXlhFscEQIatgptcUzvYBlbH39lDW8ze9d6kgdEdOTiyyuIlYby7abZs2uBE98jAaXHUwRhInLwoB1lcdSconZItH7&usqp=CAE" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">NEUROBION FORTE TABLET 30'S</h3>
+                    <p class="product-price">₹40.23 <span class="discounted-price">₹85</span></p>
+                </div>
+            </li>
+            <li class="product-item">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRXuuYWa4jHNormoWvMt_IqEy-aCQYBh4_2Co1sGtq4ABvMZDTyDdMVZpkGkbQwsAzURC9cBitWZlJ4Il3tFR4zf_IwyHzNsWMgvnw5C1K0R-txOxhuy0COPw&usqp=CAE" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Pacimol Tablet (500mg) (15tab)</h3>
+                    <p class="product-price">₹15 <span class="discounted-price">₹28</span></p>
+                </div>
+            </li>
+            <li class="product-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ6_pPbFTQHjV8fYTIwsPujOZitLTSd57rNxFjX-SK8ChLa6Iym9CVA5mgMSBSR3LE_MuweJXnMjHQboboqhZkAbqE7yyMAnpHkoIitvpkLiNWaBzG2FX-Lfw&usqp=CAE" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Mankind’s Gas-O-Fast Jeera</h3>
+                    <p class="product-price">₹57 <span class="discounted-price">₹102</span></p>
+                </div>
+            </li>
+            <li class="product-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT_cCF99GcnbKqq7PcATgHFW7vMFnPd4vYrXp4PsOJFMZQeW04V7DkpR911kjIPqVfI9HCv0SbqouBQDYaEAc1WtzjNfUc09HVLTXJIPDIh_m7c8KuYRpc1jdU&usqp=CAE" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Dgdox 400 Tablet</h3>
+                    <p class="product-price">₹34 <span class="discounted-price">₹68</span></p>
+                </div>
+            </li>
+            <li class="product-item">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSZt1V3s6CTEaaDIyrxMGxRPPRTVSmbVFSKVlgpziBPNpfiAwfAae9kjzcwVjXp7JQSDe0vvYmC3_C5mdLmelQlZx-sbjpc&usqp=CAE" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Bach Flower Mix for High Blood</h3>
+                    <p class="product-price">₹3130.35 <span class="discounted-price">₹5699</span></p>
+                </div>
+            </li>
+            <li class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTwvRrFbgcHnA5_hKUBuyYRZgGH9K3_Y_3K5AA9j9_mXhbkSajVpEZIk0O7MnMvQyBRPwa6cEpvZg6gvBrXRcZmEBoD5sPUQdD8k0PSnaEKbylsunEYmBHyxg&usqp=CAE" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Relispray Nitron Icepac Pain Relief Spray</h3>
+                    <p class="product-price">₹180 <span class="discounted-price">₹320</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
